@@ -9,7 +9,7 @@ public class ParserTest {
         String spec = "2: brand";
         String data = "1\t2\tbrand name\t";
 
-        Parser parser = new Parser(spec);
+        Parser<ChocolateBar> parser = new ChocolateBarParser(spec);
         try {
             ChocolateBar bar = parser.parse(data.split("\t"));
             Assert.assertEquals(bar.getBrand(), "brand name");
@@ -23,7 +23,7 @@ public class ParserTest {
         String spec = "2: id";
         String data = "1\t2\tbrand name\t";
 
-        Parser parser = new Parser(spec);
+        Parser<ChocolateBar> parser = new ChocolateBarParser(spec);
         try {
             ChocolateBar bar = parser.parse(data.split("\t"));
         } catch(Exception e) {

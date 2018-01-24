@@ -12,7 +12,7 @@ public class Main {
                 "6\tRaaka\tMaple & Nibs\tBolivia\t75\n" +
                 "7\tRaaka\tVanilla Rooibos\tDominican Republic & Bolivia\t67";
 
-        Parser parser = new Parser(spec);
+        Parser<ChocolateBar> parser = new ChocolateBarParser(spec);
 
         try {
             for (String line: data.split("\n")) {
