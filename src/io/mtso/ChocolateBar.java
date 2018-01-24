@@ -26,6 +26,7 @@ public class ChocolateBar {
                 this.setId(id);
             } catch(Exception e) {
                 System.out.println(e);
+                throw e;
             }
         });
 
@@ -35,29 +36,22 @@ public class ChocolateBar {
                 this.setPercentage(percentage);
             } catch(Exception e) {
                 System.out.println(e);
+                throw e;
             }
         });
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    public Integer getId() { return this.id; }
+    public String getBrand() { return this.brand; }
+    public String getName() { return this.name; }
+    public String getOrigin() { return this.origin; }
+    public Double getPercentage() { return this.percentage; }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setOrigin(String origin) {
-        this.origin = origin;
-    }
-
-    public void setPercentage(Double percentage) {
-        this.percentage = percentage;
-    }
+    public void setId(Integer id) { this.id = id; }
+    public void setBrand(String brand) { this.brand = brand; }
+    public void setName(String name) { this.name = name; }
+    public void setOrigin(String origin) { this.origin = origin; }
+    public void setPercentage(Double percentage) { this.percentage = percentage; }
 
     public String toString() {
         return String.format(
